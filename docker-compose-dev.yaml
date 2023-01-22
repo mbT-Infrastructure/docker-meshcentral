@@ -2,6 +2,6 @@ version: "3.8"
 
 services:
 
-  meshcentral:
-    container_name: meshcentral
-    build: .
+    meshcentral:
+        container_name: meshcentral
+        build: .
