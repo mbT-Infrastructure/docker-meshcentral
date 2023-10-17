@@ -1,10 +1,10 @@
 FROM madebytimo/nodejs
 
+WORKDIR /opt/meshcentral
+RUN npm install meshcentral
+
 RUN mkdir -p /media/meshcentral
 COPY entrypoint.sh /entrypoint.sh
 
-WORKDIR /app
-RUN npm install meshcentral
-
 ENTRYPOINT [ "/entrypoint.sh" ]
-CMD [ "node", "meshcentral"]
+CMD [ "node", "meshcentral" ]
